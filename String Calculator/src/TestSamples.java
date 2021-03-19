@@ -18,4 +18,9 @@ class TestSamples{
 	public void TwoStringDelimitedCommaReturnSum() {
 		assertEquals(calc.Add("1,2"), 3);
 	}
+	
+	@Test
+	public void MultipleStringsReturnSum() {
+		assertEquals(calc.Add("1,2,3,4,5"), 15);
+	}
 }

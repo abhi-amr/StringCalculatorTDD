@@ -9,7 +9,12 @@ public class StringCalculator {
 		if(input.length() == 1) {
 			return StringToInt(input);
 		}
-		return StringToInt(numbers[0]) + StringToInt(numbers[1]);
+		int sum = 0;
+		for(String number : numbers) {
+			sum += StringToInt(number);
+		}
+		
+		return sum;
 	}
 	
 	private int StringToInt(String str) {
