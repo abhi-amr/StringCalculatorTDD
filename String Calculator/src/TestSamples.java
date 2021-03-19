@@ -1,8 +1,14 @@
 import org.junit.jupiter.api.Test;
+import org.junit.rules.ExpectedException;
 import static org.junit.Assert.*;
+import org.junit.Rule;
+
+
 class TestSamples{
 	private StringCalculator calc = new StringCalculator();
 	
+	@Rule
+	public ExpectedException thrown = ExpectedException.none();
 	
 	@Test
 	public void ForEmptyStringReturnZero() {
@@ -28,6 +34,23 @@ class TestSamples{
 	public void StringsWithNewLineDelimiterReturnSum() {
 		assertEquals(calc.Add("1\n2"), 3);
 	}
+	
+	@Test
+	public void NegativeNumerThrowException() {
+		thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("Negative input!");
+        calc.Add("-1");
+        calc.Add("-5,10\n-15");
+		
+//		assertThrows(IllegalArgumentException.class, ()->{
+//			calc.Add("-1"); //expression for less than 0
+//			
+//		});
+	}
+	
+	
+	
+	
 	
 //	@Test
 //	public void NegativeNumerThrowException() {

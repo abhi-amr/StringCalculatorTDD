@@ -18,10 +18,8 @@ public class StringCalculator {
 	private int GetSum(String[] numbers) {
 		int sum = 0;
 		for(String number : numbers) {
-			
 			sum += StringToInt(number);
 		}
-		
 		return sum;
 	}
 	
