@@ -10,7 +10,7 @@ public class StringCalculator {
 			return StringToInt(input);
 		}
 		
-		String[] numbers = input.split(",");
+		String[] numbers = input.split(",|\n");
 		
 		for(String number : numbers) {
 			_sum += StringToInt(number);

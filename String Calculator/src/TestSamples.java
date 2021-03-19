@@ -23,4 +23,9 @@ class TestSamples{
 	public void MultipleStringsReturnSum() {
 		assertEquals(calc.Add("1,2,3,4,5"), 15);
 	}
+	
+	@Test
+	public void StringsWithNewLineDelimiterReturnSum() {
+		assertEquals(calc.Add("1\n2"), 3);
+	}
 }
