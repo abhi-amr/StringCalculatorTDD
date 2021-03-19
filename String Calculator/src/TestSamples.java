@@ -5,12 +5,17 @@ class TestSamples{
 	
 	
 	@Test
-	void ForEmptyStringReturnZero() {
+	public void ForEmptyStringReturnZero() {
 		assertEquals(calc.Add(""), 0);
 	}
 	
 	@Test
-	void ForSingleStringReturnTheSame() {
+	public void ForSingleStringReturnTheSame() {
 		assertEquals(calc.Add("1"), 1);
+	}
+	
+	@Test
+	public void TwoStringDelimitedCommaReturnSum() {
+		assertEquals(calc.Add("1,2"), 3);
 	}
 }
