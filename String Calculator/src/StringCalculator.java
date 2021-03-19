@@ -7,9 +7,13 @@ public class StringCalculator {
 			return 0;
 		}
 		if(input.length() == 1) {
-			return Integer.parseInt(input);
+			return StringToInt(input);
 		}
-		return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+		return StringToInt(numbers[0]) + StringToInt(numbers[1]);
+	}
+	
+	private int StringToInt(String str) {
+		return Integer.parseInt(str);
 	}
 
 }
