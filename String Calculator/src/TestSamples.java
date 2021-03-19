@@ -28,4 +28,7 @@ class TestSamples{
 	public void StringsWithNewLineDelimiterReturnSum() {
 		assertEquals(calc.Add("1\n2"), 3);
 	}
+	
+	
+	
 }
