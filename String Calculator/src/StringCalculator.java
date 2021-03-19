@@ -1,6 +1,5 @@
 
 public class StringCalculator {
-	private int _sum = 0;
 	private final String delimeter = ",|\n";
 	
 	public int Add(String input) {
@@ -13,11 +12,17 @@ public class StringCalculator {
 		
 		String[] numbers = input.split(delimeter);
 		
+		return GetSum(numbers);
+	}
+	
+	private int GetSum(String[] numbers) {
+		int sum = 0;
 		for(String number : numbers) {
-			_sum += StringToInt(number);
+			
+			sum += StringToInt(number);
 		}
 		
-		return _sum;
+		return sum;
 	}
 	
 	private int StringToInt(String str) {

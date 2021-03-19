@@ -29,6 +29,16 @@ class TestSamples{
 		assertEquals(calc.Add("1\n2"), 3);
 	}
 	
+//	@Test
+//	public void NegativeNumerThrowException() {
+//		Exception exception = assertThrows(IllegalArgumentException.class, ()->{
+//			Integer.parseInt("-1");
+//		});
+//		String expectedMessage = "No negative allowed";
+//		String actualMessage = exception.getMessage();
+//		assertTrue(actualMessage.contains(expectedMessage));
+//	}
+	
 	
 	
 }
