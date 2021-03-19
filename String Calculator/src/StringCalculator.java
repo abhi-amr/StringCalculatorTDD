@@ -2,7 +2,10 @@
 public class StringCalculator {
 	
 	public int Add(String str) {
-		return 0;
+		if(str.isEmpty()) {
+			return 0;
+		}
+		return Integer.parseInt(str);
 	}
 
 }
